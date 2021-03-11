@@ -1,5 +1,5 @@
-Regression Case Study
-======================
+# Regression Case Study
+
 
 In today's exercise you'll get a chance to try some of what you've learned
 about supervised learning on a real-world problem.
@@ -9,11 +9,13 @@ heavy equipment at auction based on its usage, equipment type, and
 configuration.  The data is sourced from auction result postings and includes
 information on usage and equipment configurations.
 
-Data
-======================
+## Data
+
 The data for this case study are in `./data` in zip files.
 
 ## Note: Do not unzip these files.
+
+
 If you unzip these files, they will be too large to upload to GitHub (unless you
 use git LFS). More importantly, pandas can read dataframes from inside zip files
 automatically, so there is no need to unzip them at all.
@@ -26,15 +28,21 @@ df = pd.read_csv('data/Train.zip')
 Use `Train.zip` for traning and validation. Don't use the Holdout data until you
 have a final model.
 
-The `data_dictionary.csv` file contains some supplementary information you might
-be interseted in if you inteded to become an expert in heavy machinery.
+The `data_dictionary.csv` file contains some supplementary information that might interset you if you intend to become an expert in heavy machinery.
 
 Spend some time (but not too much) getting to know the data. You will need a 
-strategy for dealing with missing values and categorical values. I encourage  
-you to automate that process so you don't need to address each column separately.
+strategy for dealing with missing values and categorical values. 
 
-Evaluation
-======================
+I encourage  you to automate that process so you don't need to address each 
+column separately. The sklearn `Pipeline` object is useful for chaining together
+sequences of operations that are needed to transform data in a repeatable way.
+It works on sklearn objects that implement `.fit()` and `.transform()` methods (such as `StandardSclaer`),
+or you can write your own classes that inherit from `TransformerMixin` and 
+provide your own `.fit()` and `.transform()` methods.
+
+https://scikit-learn.org/stable/modules/generated/sklearn.pipeline.Pipeline.html
+
+## Evaluation
 
 The prices of the equipment spans a large range and is not uniformly (or
 normally) distributed over that range. This poses the problem with that 
@@ -56,18 +64,21 @@ is harder to interpret and compare to validation data, so you will have to
 reverse the log-transform to get the final result.
 
 
-Modeling
-============
+## Modeling
+
 Remember that of the algorithms we have studied, some are better equipped 
 to handle non-linear regression, categorical variables, large numbers of variables and other issues you may encouter. 
 
 You may want to try a variety of models (in an automated way) to compare 
 different approaches.
 
+The best approach is likely to be one which allows you to effortlessly 
+swtich from one model to another.
 
 
-Important Tips
-=========================
+
+## Important Tips
+
 
 1. This data is quite messy. Try to use your judgement about where your
 cleaning efforts will yield the most results and focus there first.
@@ -83,3 +94,10 @@ use parameters learned from the *training data*.
 
 1. Start simply. Fit a basic model and make sure you're able to get the
 submission working then iterate to improve. Try to develop a model--even if you know it has some weaknesses--within the first two hours.
+
+## Acknowledgement
+
+
+This case study is based on Kaggle's Blue Book for Bulldozers competition. The best RMSLE was only 0.23 (obviously lower is better). Note that if you were to simply guess the median auction price for all the pieces of equipment in the test set you would get an RMSLE of about 0.7.
+
+https://www.kaggle.com/c/bluebook-for-bulldozers
