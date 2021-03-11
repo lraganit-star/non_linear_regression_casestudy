@@ -26,7 +26,7 @@ df = pd.read_csv('data/Train.zip')
 ```
 
 Use `Train.zip` for traning and validation. Don't use the Holdout data until you
-have a final model.
+have a final model.  There is *a lot* of data. You may find it convenient to work with only 10% of the data at first, until you get a working model.
 
 The `data_dictionary.csv` file contains some supplementary information that might interset you if you intend to become an expert in heavy machinery.
 
