@@ -15,4 +15,6 @@ And used One-Hot Encoding to deal with NaNs in the categorical data
 ![GridSearch](images/gdbr_gridsearch.png)
 ### GDBR With Log Transform and Optimal Hyperparameters
 ![Optimized](images/gdbr_optimized.png)
+### GDBR vs Random Forest
+![Optimized](images/gdbr_optimized.png)
 
