@@ -13,10 +13,10 @@ And used One-Hot Encoding to deal with NaNs in the categorical data
 ![LogGDBR](images/LogGDBR.png)
 ### Grid Search results for Optimal Hyperparameters GDBR
 ![GridSearch](images/gdbr_gridsearch.png)
-### Grid Search results for Optimal Hyperparameters Random Forest
-![GridSearch](images/rf_gridsearch(1).png)
 ### GDBR With Log Transform and Optimal Hyperparameters
 ![Optimized](images/gdbr_optimized.png)
+### Grid Search results for Optimal Hyperparameters Random Forest
+![GridSearch](images/rf_gridsearch(1).png)
 ### GDBR vs Random Forest
 ![VS](images/gdbr_rf_model.png)
 ### Feature Importance
