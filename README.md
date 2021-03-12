@@ -20,5 +20,5 @@ And used One-Hot Encoding to deal with NaNs in the categorical data
 ### GDBR vs Random Forest
 ![VS](images/gdbr_rf_model.png)
 ### Feature Importance
-![Features](images/Permutation_importance.png)
+![Features](images/Permuatation_importance.png)
 
