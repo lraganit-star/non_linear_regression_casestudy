@@ -49,7 +49,7 @@ normally) distributed over that range. This poses the problem with that
 it tends to over-fit on the more expensive equipment. I.e, if you're off 
 by 20% for an inexpensive piece of equipment, that might be $20, but for an expensive piece of equipment, that might be $2,000. If using a loss function such as MAE, MSE or RMSE, it will work to reduce the error on the expensive equipment, at the cost of worse predictions on the low price equipment.
 
-To solve this problem, tranform the target column (`'SalePrice'`)  using a log-tranform. This will result in a loss function as shown (if using RMSE):
+To solve this problem, tranform the target column (`'SalePrice'`)  using a log-tranform. This will result in a loss function that is sensitive to the ratio of predicted to actual, which takes its minimum value when *p* = *a* as shown (if using RMSE):
 
 ![Root Mean Squared Logarithmic Error](images/rmsle.png)
 
