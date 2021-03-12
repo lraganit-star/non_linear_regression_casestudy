@@ -7,8 +7,12 @@ we isolated our initial analysis to just a few columns:
 
 And used One-Hot Encoding to deal with NaNs in the categorical data
 ## Evaluation
+### GDBR Without Log Transform
 ![GDBR](images/GDBR.png)
+### GDBR With Log Transform
 ![LogGDBR](images/LogGDBR.png)
+### Grid Search results for Optimal Hyperparameters
 ![GridSearch](images/gdbr_gridsearch.png)
+### GDBR With Log Transform and Optimal Hyperparameters
 ![Optimized](images/gdbr_optimized.png)
 
